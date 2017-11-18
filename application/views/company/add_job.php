@@ -102,8 +102,10 @@
                                     num_people:$('#num_people').val()
                                 },
                                 function(data){
-                                    if(data=="0")
+                                    if(data=="0") {
                                         alert("发布成功");
+                                        window.location.href="<?php echo site_url()?>/company/job_list/<?php echo $_SESSION['userdata']['company_id']?>";
+                                    }
                                     else if(data=="1")
                                         alert("发布失败");
 
