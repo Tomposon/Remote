@@ -148,8 +148,10 @@
                                 },
                                 function(data)
                                 {
-                                    if(data=="0")
-                                        alert("注册成功");
+                                    if(data=="0") {
+                                        alert("注册成功，马上跳转至登录界面");
+                                        window.location.href="<?php echo site_url()?>/company/login";
+                                    }
                                     else if(data=="1")
                                         alert("该用户名已存在");
                                 }
@@ -279,7 +281,7 @@
                 <label style="margin-left: 110px;width:100%" id="comp_intro_tip">请尽可能详细填写资料，以确保贵公司获得好的招聘效果，不少于10字，限1000字以内</label>
             </div>
         </div>
-        
+
         <!--联系资料模块        -->
         <div style="width:100%;height:auto;margin-top:15px">
             <div style="float:left;margin-left: 0px;width:100%;height:5px;margin-top: 50px">
